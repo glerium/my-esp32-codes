@@ -150,7 +150,7 @@ const char index_html[] PROGMEM = R"rawliteral(
                                                  + '?_=' + (new Date()).getTime();
         }
       }
-      setInterval(refresh_img, 2000);
+      setInterval(refresh_img, 1000);
     </script>
     <br>
     <p align="center">
@@ -159,7 +159,7 @@ const char index_html[] PROGMEM = R"rawliteral(
       <span id="record_time_span"></span>
       <br>
       Set Record Interval (in second):
-      <input class="slider" type="range" min="5" max="20" value="5" step="1" id="record_interval">
+      <input class="slider" type="range" min="1" max="20" value="5" step="1" id="record_interval">
       <span id="record_interval_span"></span>
       <style>
         input[type=range] {

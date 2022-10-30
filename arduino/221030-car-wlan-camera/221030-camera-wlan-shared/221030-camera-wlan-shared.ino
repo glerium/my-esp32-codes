@@ -92,8 +92,8 @@ void setup() {
 
   /* wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */
   IPAddress staticIP(192, 168, 4, 13);
-  IPAddress gateway(192, 168, 0, 1);
-  IPAddress subnet(255, 255, 255, 0);
+  IPAddress gateway(192, 168, 4, 1);
+  IPAddress subnet(255, 255, 0, 0);
   IPAddress dns(192, 168, 0,1);
   if (WiFi.config(staticIP, gateway, subnet, dns, dns) == false) {
     Serial.println("Configuration failed.");
