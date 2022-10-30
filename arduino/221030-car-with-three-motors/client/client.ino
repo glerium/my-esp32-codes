@@ -16,6 +16,8 @@ void setup() {
   ledcSetup(steer, 50, 8);
   ledcWrite(steer, 20);
   // Serial.begin(115200);
+  pinMode(33, OUTPUT);  //light
+  digitalWrite(33, 1);
 }
 
 void loop() {
@@ -27,15 +29,16 @@ void loop() {
       stop();
     }
   }
-  delay(50);
+  delay(5);
 }
 
 void move(){
   ledcWrite(motor1, 0);
-  ledcWrite(motor2, 1023);
-  pinMode(33, OUTPUT);
+  ledcWrite(motor2, 200);
+  digitalWrite(33, 0);
 }
 void stop(){
   ledcWrite(motor1, 0);
   ledcWrite(motor2, 0);
+  digitalWrite(33, 1);
 }

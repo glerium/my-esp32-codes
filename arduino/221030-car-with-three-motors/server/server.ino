@@ -18,24 +18,34 @@ void setup() {
   ledcWrite(steer, 20);
 
   pinMode(35, INPUT); //key1
+  pinMode(33, OUTPUT); //light
+  digitalWrite(33, 1);
 }
 
 void loop() {
-  while(digitalRead(35));
+  while(digitalRead(35)){
+    Serial1.write(2);
+    Serial2.write(2);
+    delay(50);
+  }
   move();
-  delay(300);
+  delay(1000);
   stop();
 }
 
 void move(){
   ledcWrite(motor1, 0);
-  ledcWrite(motor2, 1023);
-  Serial1.write(1);
-  Serial2.write(1);
+  ledcWrite(motor2, 200);
+  for(int i=1;i<=10;i++){
+    Serial1.write(1);
+    Serial2.write(1);
+  }
+  digitalWrite(33, 0);
 }
 void stop(){
   ledcWrite(motor1, 0);
   ledcWrite(motor2, 0);
   Serial1.write(2);
   Serial2.write(2);
+  digitalWrite(33, 1);
 }
