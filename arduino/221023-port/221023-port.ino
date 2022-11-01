@@ -1,3 +1,4 @@
+//2022.10.23 单片机与电脑利用电脑串口通信控制LED亮灭
 void setup() {
   Serial.begin(9600);
   pinMode(33, OUTPUT);

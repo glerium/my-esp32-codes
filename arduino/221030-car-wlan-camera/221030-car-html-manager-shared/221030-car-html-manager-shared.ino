@@ -1,3 +1,4 @@
+//单片机固件，会向外界发射WiFi信号
 /*********
   https://randomnerdtutorials.com/esp32-esp8266-input-data-html-form/
 *********/

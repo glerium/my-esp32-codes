@@ -1,5 +1,6 @@
+//串口通信控制蜂鸣器发声
 int channel=0, cn_light=1;
-const int tones[]={262,294,330,349,392,440,494};
+const int tones[]={262,294,330,349,392,440,494};  //每个音符对应的频率
 void setup() {
   Serial.begin(9600);
   ledcAttachPin(25, channel);

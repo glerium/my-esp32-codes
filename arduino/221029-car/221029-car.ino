@@ -1,10 +1,11 @@
+//小车行进比赛代码
 const int T_LEFT=7, T_FORWARD=21, T_RIGHT=33;
 // const int T_LEFT=50, T_FORWARD=300, T_RIGHT=550;
 int motor1=3, motor2=4, steer=0;
 void turn_ms(int pos, int ms);
 void turn(int pos);
 void stop();
-void move(bool forward=true, int speed=400);
+void move(bool forward=true, int speed=300);
 
 void setup() {
   pinMode(26, OUTPUT);
@@ -19,6 +20,7 @@ void setup() {
   ledcWrite(steer, 20);
   pinMode(35, INPUT);
   turn(T_FORWARD);
+  // turn(T_RIGHT);
 }
 
 void loop() {

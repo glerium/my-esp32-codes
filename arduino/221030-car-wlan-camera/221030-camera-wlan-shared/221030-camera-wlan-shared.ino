@@ -1,3 +1,4 @@
+//摄像机固件，通过连接单片机产生的热点实现局域网通信
 #include "esp_camera.h"
 #include <WiFi.h>
 

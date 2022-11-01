@@ -1,9 +1,9 @@
+//呼吸灯，使用PWM模块
 int LED[]={12,14,18};
 void setup() {
   for(int i=0;i<3;i++){
     pinMode(LED[i], OUTPUT);
     ledcSetup(LED[i], 100000, 10);
-    
   }
 }
 

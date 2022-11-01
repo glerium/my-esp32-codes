@@ -1,3 +1,4 @@
+//跨单片机通信测试
 void setup() {
   pinMode(33, OUTPUT);
   pinMode(32, OUTPUT);

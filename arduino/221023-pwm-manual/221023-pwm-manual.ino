@@ -1,3 +1,4 @@
+//呼吸灯，手动模拟PWM
 const int led = 33;
 const int cnt = 100;
 void setup() {

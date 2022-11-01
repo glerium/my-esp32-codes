@@ -1,3 +1,4 @@
+// 2022.10.23 按键小台灯
 int led1=33, led2=32;
 int key1=35, key2=34;
 void setup() {
