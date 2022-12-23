@@ -1,7 +1,10 @@
+''' LED灯和按钮的综合应用——模拟抢答器
+    KEY1(35)、KEY2(34)：两位选手；BOOT(0)：清空状态
+'''
 from machine import Pin
 import time
 
-def Buzz(BUZZ):
+def Buzz(BUZZ):   # 选手按下按钮后调用蜂鸣器(BUZZ)
     for i in range(500):
         BUZZ.value(0)
         time.sleep_us(631)

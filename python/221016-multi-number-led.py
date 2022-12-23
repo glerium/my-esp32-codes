@@ -1,3 +1,4 @@
+''' 效果类似221016-button-number-led.py这份代码，但这次外接了两个LED数码管，范围变为00-99循环 '''
 from machine import Pin
 import time
 
@@ -22,6 +23,10 @@ def hide(n:int) -> None:
         LED[i-1].value(1)
 
 def show2(n:int, tim:int) -> None:
+    ''' 循环显示两个数字
+        参数含义：n：需要显示的数字（范围0-99）
+                 tim：需要显示的时间（以毫秒为单位）
+    '''
     cycle = 5
     x,y = n//10, n%10
     for i in range(tim//cycle):

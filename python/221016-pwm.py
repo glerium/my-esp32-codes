@@ -1,10 +1,9 @@
+''' 使用machine.PWM模块，实现221016-brightness.py中的呼吸灯效果 '''
 from machine import Pin,PWM
 import time
-import random
 led = list()
 pwm = list()
 lights = [25]
-random.seed(114514)
 for i in lights:
     led.append(Pin(i,Pin.OUT))
     print(i)

@@ -1,3 +1,5 @@
+''' 让蜂鸣器发声，手动控制蜂鸣器的振动频率（手动模拟PWM） '''
+
 from machine import Pin
 import time
 
@@ -14,7 +16,7 @@ KEY1 = Pin(35,Pin.IN)
 BOOT = Pin(0,Pin.IN)
 BUZZ = Pin(25,Pin.OUT)
 freq=[0,1046,1175,1318,1397,1568,1760,1976]  # 每个音符对应的频率
-song_freq=[]        # 歌曲
+song_freq=[1,1,5,5,6,6,5,5,4,4,3,3,2,2,1]        # 歌曲
 for i in song_freq:
     if i:
         Buzz(BUZZ,freq[i])

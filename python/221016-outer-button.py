@@ -1,3 +1,4 @@
+''' 使用面包板外接按钮，对应22号GPIO引脚 '''
 from machine import Pin
 import time
 BUZZ = Pin(25,Pin.OUT)

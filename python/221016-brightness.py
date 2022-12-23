@@ -1,3 +1,4 @@
+''' LED呼吸灯，手动模拟PWM调节亮度 '''
 from machine import Pin
 import time
 LEDR = Pin(33,Pin.OUT)

@@ -1,3 +1,7 @@
+''' 借助PWM模块驱动电机
+    效果：电机先从快到慢再从慢到快，不断循环
+    原理：占空比的不同可以改变电机旋转的速度，不断改变pwm.duty即可达到效果
+'''
 from machine import Pin,PWM
 import time
 pwm1 = PWM(Pin(26,Pin.OUT))

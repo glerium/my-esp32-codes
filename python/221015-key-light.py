@@ -1,3 +1,4 @@
+''' LED和按钮：模拟小台灯（按下按钮后灯亮，再次按下时灯灭） '''
 from machine import Pin
 import time
 LED_G = Pin(32,Pin.OUT)

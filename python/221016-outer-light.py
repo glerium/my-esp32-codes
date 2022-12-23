@@ -1,3 +1,4 @@
+''' 外接4个LED灯 '''
 from machine import Pin
 import random
 import time

@@ -1,3 +1,4 @@
+''' LED和time.sleep定时器的应用 '''
 from machine import Pin
 import time
 LED_G = Pin(32,Pin.OUT)
